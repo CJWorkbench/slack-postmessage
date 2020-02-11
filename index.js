@@ -13,10 +13,12 @@ async function run () {
     return core.setFailed(err.message)
   }
 
+  console.log(message)
+
   try {
     await slack.chat.postMessage(message)
   } catch (err) {
-    return core.setFailed(err.code + ": " + (err.original || err.statusMessage))
+    return core.setFailed(err.code + ': ' + JSON.stringify(err))
   }
 }
 
