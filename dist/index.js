@@ -871,10 +871,10 @@ function serial(list, iterator, callback)
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
 const core = __webpack_require__(470)
-const SlackWebClient = __webpack_require__(114)
+const { WebClient } = __webpack_require__(114)
 const SLACK_TOKEN = process.env.SLACK_TOKEN
 
-const slack = new SlackWebClient(SLACK_TOKEN)
+const slack = new WebClient(SLACK_TOKEN)
 
 async function run () {
   let message
