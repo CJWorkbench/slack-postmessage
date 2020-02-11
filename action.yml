@@ -1,8 +1,8 @@
 name: slack-postmessage
 description: "Call slack-notify's postMessage() with the given arguments"
 branding:
-  icon: bell
-  color: purple
+  icon: slack
+  color: red
 env:
   SLACK_TOKEN:
     description: Slack Bot Token that can write messages to your Slack workspace.
@@ -11,7 +11,6 @@ inputs:
   message:
     required: true
     description: "Read https://api.slack.com/methods/chat.postMessage for arguments."
-outputs: {}
 runs:
   using: node12
   main: dist/index.js
